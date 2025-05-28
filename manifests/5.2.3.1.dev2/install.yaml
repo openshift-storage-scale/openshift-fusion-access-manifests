@@ -10765,26 +10765,26 @@ spec:
         - name: SHORTNAME_NODE_MAPPING
           value: "yes"
         - name: CSI_SNAPSHOTTER_IMAGE
-          value: quay.io/openshift-storage-scale/csi/csi-snapshotter:${TAG}
+          value: quay.io/openshift-storage-scale/csi/csi-snapshotter:5.2.3.1.dev2
         - name: CSI_ATTACHER_IMAGE
-          value: quay.io/openshift-storage-scale/csi/csi-attacher:${TAG}
+          value: quay.io/openshift-storage-scale/csi/csi-attacher:5.2.3.1.dev2
         - name: CSI_PROVISIONER_IMAGE
-          value: quay.io/openshift-storage-scale/csi/csi-provisioner:${TAG}
+          value: quay.io/openshift-storage-scale/csi/csi-provisioner:5.2.3.1.dev2
         - name: CSI_LIVENESSPROBE_IMAGE
-          value: quay.io/openshift-storage-scale/csi/livenessprobe:${TAG}
+          value: quay.io/openshift-storage-scale/csi/livenessprobe:5.2.3.1.dev2
         - name: CSI_NODE_REGISTRAR_IMAGE
-          value: quay.io/openshift-storage-scale/csi/csi-node-driver-registrar:${TAG}
+          value: quay.io/openshift-storage-scale/csi/csi-node-driver-registrar:5.2.3.1.dev2
         - name: CSI_RESIZER_IMAGE
-          value: quay.io/openshift-storage-scale/csi/csi-resizer:${TAG}
+          value: quay.io/openshift-storage-scale/csi/csi-resizer:5.2.3.1.dev2
         - name: CSI_DRIVER_IMAGE
-          value: quay.io/openshift-storage-scale/csi/ibm-spectrum-scale-csi-driver:${TAG}
+          value: quay.io/openshift-storage-scale/csi/ibm-spectrum-scale-csi-driver:5.2.3.1.dev2
         - name: METRICS_BIND_ADDRESS
           value: "8383"
         - name: WATCH_NAMESPACE
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
-        image: quay.io/openshift-storage-scale/ibm-spectrum-scale-csi-operator:${TAG}
+        image: quay.io/openshift-storage-scale/ibm-spectrum-scale-csi-operator:5.2.3.1.dev2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           exec:
@@ -10895,7 +10895,7 @@ spec:
           valueFrom:
             resourceFieldRef:
               resource: limits.memory
-        image: quay.io/openshift-storage-scale/ibm-spectrum-scale-operator:${TAG}
+        image: quay.io/openshift-storage-scale/ibm-spectrum-scale-operator:5.2.3.1.dev2
         livenessProbe:
           httpGet:
             path: /healthz
